@@ -1,0 +1,31 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "lessonmicroservicedemo.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/WeatherForecast",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE", "PATCH" ]
+    },
+    {
+      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "lessonmicroservicedemo.api",
+          "Port": 8081
+        }
+      ],
+      "UpstreamPathTemplate": "/WeatherForecast",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE", "PATCH" ]
+    }
+  ],
+  "GlobalConfiguration": {
+     "BaseUrl":"https://localhost:8083"
+  }
+}

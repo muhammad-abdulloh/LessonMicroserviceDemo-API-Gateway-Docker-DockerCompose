@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  lessonmicroservicedemo.api:
+    image: ${DOCKER_REGISTRY-}lessonmicroservicedemoapi
+    build:
+      context: .
+      dockerfile: LessonMicroserviceDemo.API/Dockerfile
+
+  apigateway.api:
+    image: ${DOCKER_REGISTRY-}apigatewayapi
+    build:
+      context: .
+      dockerfile: APIGateway.API/Dockerfile
+
